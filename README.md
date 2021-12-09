@@ -1,2 +1,2 @@
-# Grupp6_gik2f8-js-frontend-start
+# Grupp6_gik2f8-js-frontend
  
