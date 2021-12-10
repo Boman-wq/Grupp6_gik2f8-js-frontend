@@ -2,7 +2,12 @@
   HTML-code to represent a "User-object"
 
 */
+const formElement = document.querySelector('form.create__form');
+const buttonElement = document.querySelector(".btn");
+buttonElement.addEventListener('click', createUser);
+// document.addEventListener('click', createUser)
 
+// https://stackoverflow.com/questions/69745449/why-is-my-fetch-request-being-sent-multiple-times
 function renderUser(user) {
   return `
   <li class="card card-catalina-blue text-dark">
@@ -25,3 +30,22 @@ function renderUser(user) {
   </li>
 `;
 }
+
+function createUser(event){
+  event.preventDefault();
+  
+  const data = {
+    f_name: formElement.f_name.value,
+    l_name: formElement.l_name.value,
+    email: formElement.email.value
+    // f_name: f_name.value,
+    // l_name: l_name.value,
+    // email: email
+  };
+  //postUser(data);
+  //console.log('Hej')
+  postUser(data).then((result) =>{console.log(result);}).catch((error) => {
+    console.log(error);
+  });
+}
+
