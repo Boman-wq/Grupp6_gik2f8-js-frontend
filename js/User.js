@@ -4,7 +4,10 @@
 */
 const formElement = document.querySelector('form.create__form');
 const buttonElement = document.querySelector(".btn");
-buttonElement.addEventListener('click', createUser);
+if(buttonElement)
+{
+  buttonElement.addEventListener('click', createUser);
+}
 
 function renderUser(user) {
   return `
