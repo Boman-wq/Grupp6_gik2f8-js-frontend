@@ -18,7 +18,7 @@ function postUser(data){
         headers: {
             "Content-type":"application/json"
         },
-        body: JSONData
+        body: JSON.stringify(data)
     });
     return result;
 }
