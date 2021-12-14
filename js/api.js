@@ -10,7 +10,8 @@ return result;
 
 // GET user ID
 function getById(id){
-    const completeUrl = url + id;
+    //const completeUrl = url+id;
+    const completeUrl = `${url}${id}`;
         const result = fetch(completeUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -49,7 +50,7 @@ function deleteUser(data){
 //Update an exsiting user
 function putUser(data){
     const JSONData = JSON.stringify(data);
-    console.log(JSONData)
+    //console.log(JSONData)
     const result = fetch(url, {
         method: "PUT",
         headers: {

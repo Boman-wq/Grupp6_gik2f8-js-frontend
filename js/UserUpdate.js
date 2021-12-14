@@ -8,12 +8,16 @@
 */
 const formElement = document.querySelector('form.create__form');
 const buttonElement = document.querySelector(".btn");
-if(buttonElement)
-{
-  buttonElement.addEventListener('click', putUser);
-}
+
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get("id");
+
+if(buttonElement)
+{
+  buttonElement.addEventListener('click', updateUser);
+}
+
+
 
 if(userId){
   getById(userId).then((user) => {
@@ -35,7 +39,8 @@ function updateUser(event){
     presentation: formElement.presentation.value
   };
 
-  putUser(data).then((result) =>{console.log(result); location.replace("http://localhost:5500/read.html");}).catch((error) => {
+  putUser(data).then((result) =>{console.log(result);}).catch((error) => {
     console.log(error);
   });
 }
+//location.replace("http://localhost:5500/read.html")

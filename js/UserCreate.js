@@ -11,6 +11,7 @@ if(buttonElement)
   buttonElement.addEventListener('click', createUser);
 }
 
+
 //Create a user with first,last name and email.
 function createUser(event){
   event.preventDefault();
