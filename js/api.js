@@ -11,7 +11,6 @@ return result;
 // GET user ID
 function getById(id){
     const completeUrl = url + id;
-    console.log(completeUrl)
         const result = fetch(completeUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -19,7 +18,6 @@ function getById(id){
         });
     return result;
 }
-getById(1)
 
 //Create a user
 function postUser(data){
