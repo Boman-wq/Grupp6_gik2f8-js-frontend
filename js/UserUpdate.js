@@ -39,7 +39,7 @@ function updateUser(event){
     presentation: formElement.presentation.value
   };
 
-  putUser(data).then((result) =>{console.log(result);}).catch((error) => {
+  putUser(data).then((result) =>{console.log(result); location.replace("http://" + window.location.hostname + ":" + window.location.port + "/read.html");}).catch((error) => {
     console.log(error);
   });
 }
