@@ -24,7 +24,7 @@ function createUser(event){
   };
   
   //
-  postUser(data).then((result) =>{console.log(result); location.replace("http://localhost:5500/read.html");}).catch((error) => {
+  postUser(data).then((result) =>{console.log(result); location.replace("http://" + window.location.hostname + ":" + window.location.port + "/read.html");}).catch((error) => {
     console.log(error);
   });
 
